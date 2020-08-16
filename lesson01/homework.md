@@ -157,8 +157,8 @@ reserve-space = 0
 
 ```bash
 ./tikv-server --addr=127.0.0.1:50415 --advertise-addr=127.0.0.1:50415 --status-addr=127.0.0.1:50416 --pd=http://127.0.0.1:2379,http://127.0.0.1:2382,http://127.0.0.1:2384 --config=./tikv-0/tikv.toml --data-dir=./tikv-0/data --log-file=./tikv-0/tikv.log
-502 29447 29425   0  5:20下午 ttys003    0:13.40 /Users/wangxiaodong/.tiup/components/tikv/v4.0.4/tikv-server --addr=127.0.0.1:50417 --advertise-addr=127.0.0.1:50417 --status-addr=127.0.0.1:50418 --pd=http://127.0.0.1:2379,http://127.0.0.1:2382,http://127.0.0.1:2384 --config=./tikv-1/tikv.toml --data-dir=./tikv-1/data --log-file=./tikv-1/tikv.log
-502 29448 29425   0  5:20下午 ttys003    0:10.87 /Users/wangxiaodong/.tiup/components/tikv/v4.0.4/tikv-server --addr=127.0.0.1:50419 --advertise-addr=127.0.0.1:50419 --status-addr=127.0.0.1:50420 --pd=http://127.0.0.1:2379,http://127.0.0.1:2382,http://127.0.0.1:2384 --config=./tikv-2/tikv.toml --data-dir=./tikv-2/data --log-file=./tikv-2/tikv.log
+502 29447 29425   0  5:20下午 ttys003    0:13.40 ./tikv-server --addr=127.0.0.1:50417 --advertise-addr=127.0.0.1:50417 --status-addr=127.0.0.1:50418 --pd=http://127.0.0.1:2379,http://127.0.0.1:2382,http://127.0.0.1:2384 --config=./tikv-1/tikv.toml --data-dir=./tikv-1/data --log-file=./tikv-1/tikv.log
+502 29448 29425   0  5:20下午 ttys003    0:10.87 ./tikv-server --addr=127.0.0.1:50419 --advertise-addr=127.0.0.1:50419 --status-addr=127.0.0.1:50420 --pd=http://127.0.0.1:2379,http://127.0.0.1:2382,http://127.0.0.1:2384 --config=./tikv-2/tikv.toml --data-dir=./tikv-2/data --log-file=./tikv-2/tikv.log
 ```
 
 关键就是指定 pd-server 集群地址

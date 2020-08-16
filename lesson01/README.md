@@ -7,7 +7,9 @@
 ## 资源
 
 [存储](https://pingcap.com/blog-cn/tidb-internal-1/)
+
 [计算](https://pingcap.com/blog-cn/tidb-internal-2/)
+
 [调度](https://pingcap.com/blog-cn/tidb-internal-3/)
 
 ## 作业
