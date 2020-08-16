@@ -1,5 +1,9 @@
 # tidb-high-performance
 
+## 课程学习计划
+
+<https://docs.qq.com/sheet/DSlBwS3VCb01kTnZw?tab=BB08J2>
+
 ## 课程
 
 | 课程     | 简介                                               | 解答                           |

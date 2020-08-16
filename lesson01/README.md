@@ -1,9 +1,5 @@
 # TIDB 总体架构
 
-## 课程学习计划
-
-<https://docs.qq.com/sheet/DSlBwS3VCb01kTnZw?tab=BB08J2>
-
 ## 资源
 
 [存储](https://pingcap.com/blog-cn/tidb-internal-1/)
