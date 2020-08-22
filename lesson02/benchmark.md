@@ -41,6 +41,24 @@ alertmanager_servers:
 
 ## sysbench
 
+Point select 测试
+
+```shell
+sysbench --config-file=config oltp_point_select --threads=32 --tables=32 --table-size=10000 run
+```
+
+Update index 测试
+
+```shell
+sysbench --config-file=config oltp_update_index --threads=32 --tables=32 --table-size=10000 run
+```
+
+Read-Only 测试
+
+```shell
+sysbench --config-file=config oltp_read_only --threads=32 --tables=32 --table-size=10000 run
+```
+
 ```text
 sysbench --config-file=config oltp_update_index --threads=32 --tables=32 --table-size=10000 run
 sysbench 1.0.20 (using bundled LuaJIT 2.1.0-beta2)
@@ -178,6 +196,15 @@ Threads fairness:
 
 ## go-ycsb
 
+workloada 负载测试
+
+```shell
+./bin/go-ycsb load mysql -P workloads/workloada -p recordcount=10000 -p mysql.host=10.227.14.244 -p mysql.port=4000 --threads 256
+
+./bin/go-ycsb run mysql -P workloads/workloada -p recordcount=10000 -p mysql.host=10.227.14.244 -p mysql.port=4000 --threads 64
+
+```
+
 ```text
 
 ./bin/go-ycsb run mysql -P workloads/workloada -p recordcount=10000 -p mysql.host=10.227.14.244 -p mysql.port=4000 --threads 64
@@ -204,6 +231,18 @@ UPDATE - Takes(s): 2.5, Count: 469, OPS: 189.6, Avg(us): 248146, Min(us): 12515,
 ## go-tpc
 
 tpc-c
+
+准备数据
+
+```bash
+./bin/go-tpc tpcc -H 10.227.14.244 -P 4000 -D tpcc --warehouses 10 prepare
+```
+
+运行测试
+
+```bash
+./bin/go-tpc tpcc -H 10.227.14.244 -P 4000 -D tpcc --warehouses 10 run --time 1m --threads 8
+```
 
 ```text
 ./bin/go-tpc tpcc -H 10.227.14.244 -P 4000 -D tpcc --warehouses 10 run --time 1m --threads 8
@@ -246,7 +285,20 @@ tpmC: 533.0
 
 tpc-h
 
+准备数据
+
+```bash
+./bin/go-tpc tpch prepare -H 10.227.14.244 -P 4000 -D tpch --sf 4 --analyze
+```
+
+运行测试
+
+```bash
+./bin/go-tpc tpch run -H 10.227.14.244 -P 4000 -D tpch --sf 1
+```
+
 ```text
+./bin/go-tpc tpch run -H 10.227.14.244 -P 4000 -D tpch --sf 1
 Finished
 [Summary] Q1: 2.23s
 [Summary] Q10: 1.14s
