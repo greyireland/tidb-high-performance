@@ -323,3 +323,12 @@ Finished
 [Summary] Q8: 1.59s
 [Summary] Q9: 3.58s
 ```
+
+## 截图
+
+![qps](tidb-qps.png)
+![tidb-lat](tidb-server.png)
+![disk-write](disk-write.png)
+![disk](disk.png)
+![disk_performance](disk_performance.png)
+![grpc](grpc.png)
